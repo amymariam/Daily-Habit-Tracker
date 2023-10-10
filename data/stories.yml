@@ -1,0 +1,105 @@
+# version: "2.0"
+
+# stories:
+# - story: Greet and Create Habit
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: create_habit
+#   - action: action_create_habit
+
+# - story: List Habits 
+#   steps:
+#   - intent: list_habits
+#   - action: action_list_habits
+
+# - story: Track Habit
+#   steps:
+#   - intent: track_habit
+#   - action: action_track_habit
+#   - intent: affirm
+#   - action: utter_affirm
+
+
+# - story: Remind a habit
+#   steps:
+#   - intent: remind_habit
+#   - action: action_remind_habit
+
+# # - story: Update Habit
+# #   steps:
+# #   - intent: update_habit
+# #   - action: action_update_habit
+
+# - story: Delete Habit and Say Goodbye
+#   steps:
+#   - intent: delete_habit
+#   - action: action_delete_habit
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - story: Handle Thanks 
+#   steps:
+#   - intent: thanks
+#   - action: utter_thanks
+
+# # - story: Inform About Habit
+# #   steps:
+# #   - intent: inform
+# #   - action: action_inform_habit
+
+# # - story: User Asks for Date and Time
+# #   steps:
+# #   - intent: ask_date
+# #   - action: action_tell_date
+# #   - intent: ask_time
+# #   - action: action_tell_time
+####################
+version: "2.0"
+
+stories:
+- story: Greet and Create Habit
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: create_habit
+  - action: action_create_habit
+
+- story: Respond to Goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: List Habits and Provide Help
+  steps:
+  - intent: list_habits
+  - action: action_list_habits
+
+
+- story: Track Habit and Remind
+  steps:
+  - intent: track_habit
+  - action: action_track_habit
+  - intent: remind_habit
+  - action: action_remind_habit
+
+- story: Delete Habit and Say Goodbye
+  steps:
+  - intent: delete_habit
+  - action: action_delete_habit
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Thank User and Handle Affirmation
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+  - intent: affirm
+  - action: utter_affirm
+
+- story: Handle Denial and Provide Help
+  steps:
+  - intent: deny
+  - action: utter_deny
+  - intent: help
+  - action: action_provide_help

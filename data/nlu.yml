@@ -1,0 +1,131 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey there
+    - Hey
+    - Hi bot
+    - Good morning 
+    - Good afternoon
+    - Good evening
+
+
+- intent: goodbye
+  examples: |
+    - Goodbye
+    - Bye
+    - See you later
+    - Have a nice day
+
+- intent: create_habit
+  examples: |
+    - I want to create a new habit
+    - I want to start a new habit
+    - Log a new habit
+    - Can you help me make a new habit?
+    - Let's start a new habit
+    - Add a new habit to my list
+
+- intent: list_habits
+  examples: |
+    - Show me my habits
+    - List my habits
+    - What are my current habits?
+    - List of habits
+    - Display my habits
+
+- intent: track_habit
+  examples: |
+    - I completed [reading](section) for today
+    - Mark [gardening](section) as done
+    - [jog](section) completed
+    - I did [meditation](section)
+
+- intent: remind_habit
+  examples: |
+    - Remind me to do [coding](section)
+    - Send me a reminder to [cooking](section)
+    - I need a reminder to complete my [homework](section)
+    - Set a reminder for my daily [writing](section)
+
+- intent: delete_habit
+  examples: |
+    - Remove a habit from my list
+    - Delete a habit
+    - I don't want to track [jog](habit) anymore
+    - Get rid of [yoga](habit)
+
+- intent: help
+  examples: |
+    - Can you help me?
+    - I need assistance
+    - What can you do?
+    - Help
+
+- intent: thanks
+  examples: |
+    - Thank you
+    - Thanks a lot
+    - I appreciate your help
+    - Thanks for your assistance
+
+# - intent: feedback
+#   examples: |
+#     - Your service is great
+#     - I have some feedback
+#     - I'd like to give you feedback
+#     - Can I provide some feedback?
+
+- intent: deny
+  examples: |
+    - No
+    - I don't think so
+    - That's not correct
+    - I disagree
+
+- intent: affirm
+  examples: |
+    - Yes
+    - That's right
+    - I agree
+    - Sure thing
+
+# - intent: inform
+#   examples: |
+#     - My habit is [habit]
+#     - I want to track [habit]
+#     - [habit] is my daily task
+#     - I do [habit] every day
+
+# - intent: ask_date
+#   examples: |
+#     - What's the date today?
+#     - Can you tell me today's date?
+#     - What's today's date?
+
+# - intent: ask_time
+#   examples: |
+#     - What time is it?
+#     - Can you tell me the time?
+#     - What's the current time?
+
+# - lookup: inform
+#   examples: |
+#     - My habit is [habit]
+#     - I want to track [habit]
+#     - [habit] is my daily task
+#     - I do [habit] every day
+
+- lookup: habit
+  examples: |
+    - jogging
+    - reading
+    - meditation
+    - coding
+    - cooking
+    - gardening
+    - exercising
+    - writing

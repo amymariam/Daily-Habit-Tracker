@@ -1,0 +1,72 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - create_habit
+  - list_habits
+  - track_habit
+  - remind_habit
+ # - update_habit
+  - delete_habit
+  - help
+  - thanks
+#  - feedback
+  - deny
+  - affirm
+  # - inform
+  # - ask_date
+  # - ask_time
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - action_create_habit
+  - action_list_habits
+  - action_track_habit
+  - action_remind_habit
+  # - action_update_habit
+  - action_delete_habit
+  - action_provide_help
+  - utter_thanks
+  # - action_handle_feedback
+  - utter_affirm
+  - utter_deny
+  # - action_inform_habit
+  # - action_tell_date
+  # - action_tell_time
+
+slots:
+  habit:
+    type: text
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day."
+  utter_thanks:
+    - text: "You're welcome! If you have more questions, feel free to ask."
+  utter_affirm:
+    - text: "Got it!"
+  utter_deny:
+    - text: "No problem. If you change your mind, I'm here to help."
+  utter_error:
+    - text: "Oops! Something went wrong. Could you please repeat that?"
+
+templates:
+  utter_ask_habit:
+    - text: "What habit would you like to track?"
+  utter_ask_new_habit:
+    - text: "What should the new habit be?"
+
+rules:
+  - rule: Respond to a greeting
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+#   # Define other rules here based on your rules.yml content
+
+# stories:
+#   # Define your stories here based on your stories.yml content

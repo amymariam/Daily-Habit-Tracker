@@ -1,0 +1,75 @@
+version: "2.0"
+
+stories:
+- story: User Greeting and Habit Creation
+  steps:
+  - user: |
+      Hi
+    intent: greet
+    - action: utter_greet
+  - user: |
+      I want to start a new habit
+    intent: create_habit
+    - action: action_create_habit
+
+- story: User Asks for Habit List 
+  steps:
+  - user: |
+      Show me my habits
+    intent: list_habits
+    - action: action_list_habits
+
+- story: User Tracks Habit and Gets Reminded
+  steps:
+  - user: |
+      I completed my habit for today
+    intent: track_habit
+    - action: action_track_habit
+
+- story: Reminded a habit
+  steps:
+  - user: |
+      Remind me to do my habit
+    intent: remind_habit
+    - action: action_remind_habit
+
+# - story: User Updates Habit
+#   steps:
+#   - user: |
+#       Change my habit to reading
+#     - action: action_update_habit
+
+- story: User Deletes Habit and Ends Conversation
+  steps:
+  - user: |
+      Remove a habit from my list
+    intent: delete_habit
+    - action: action_delete_habit
+  - user: |
+      Goodbye
+    intent: goodbye
+    - action: utter_goodbye
+
+- story: User Expresses Thanks and Gives Feedback
+  steps:
+  - user: |
+      Thank you
+    intent: thanks
+    - action: utter_thanks
+  # - user: |
+  #     Your service is great
+  #   - action: action_handle_feedback
+
+# - story: User Provides Habit Information
+#   steps:
+#   - user: |
+#       My habit is jogging
+#     - action: action_inform_habit
+
+# - story: User Asks for Date and Time
+#   steps:
+#   - user: |
+#       What's the date today?
+#     - action: action_tell_date
+#   - user: |
+#       Can you tell me the time?

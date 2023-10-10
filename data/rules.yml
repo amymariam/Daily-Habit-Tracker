@@ -1,0 +1,78 @@
+version: "2.0"
+
+rules:
+- rule: Respond to a greeting
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Respond to a goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Create a new habit
+  steps:
+  - intent: create_habit
+  - action: action_create_habit
+
+- rule: List user's habits
+  steps:
+  - intent: list_habits
+  - action: action_list_habits
+
+- rule: Track a habit
+  steps:
+  - intent: track_habit
+  - action: action_track_habit
+
+- rule: Remind if habit not done
+  steps:
+  - intent: remind_habit
+  - action: action_remind_habit
+
+- rule: Delete a habit
+  steps:
+  - intent: delete_habit
+  - action: action_delete_habit
+
+- rule: Provide help
+  steps:
+  - intent: help
+  - action: action_provide_help
+
+- rule: Thank the user
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+# - rule: Handle feedback
+#   steps:
+#   - intent: feedback
+#   - action: action_handle_feedback
+
+- rule: Handle user affirmation
+  steps:
+  - intent: affirm
+  - action: utter_affirm
+
+- rule: Handle user denial
+  steps:
+  - intent: deny
+  - action: utter_deny
+
+# - rule: Inform about a habit
+#   steps:
+#   - intent: inform
+#   - action: action_inform_habit
+
+# - rule: Respond to date inquiry
+#   steps:
+#   - intent: ask_date
+#   - action: action_tell_date
+
+# - rule: Respond to time inquiry
+#   steps:
+#   - intent: ask_time
+#   - action: action_tell_time
+
